@@ -1,10 +1,6 @@
-let btn=document.querySelector("#btn");
-let ol=document.querySelector("#list");
-
-btn.addEventListener("click",function (){
-    let typInp=document.querySelector("#txt").value;
-    let li=document.createElement("li");
-    li.setAttribute("class","list-group-item");
-    li.textContent=typInp;
-    ol.append(li);
+$("#btn").click(function (){
+    let value=$("input").val();
+    let li=`<li class="list-group-item">${value}</li>`;
+    $('#task').append(li);
+    $("img").attr('src',value);
 });
